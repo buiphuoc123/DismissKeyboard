@@ -1,26 +1,66 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Dismiss_Keyboard" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="UIControl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H3t-1b-51V">
+                                <rect key="frame" x="26" y="278.5" width="323" height="30"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S6M-aj-8VZ">
+                                <rect key="frame" x="26" y="318.5" width="323" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="0.34267979452054792" colorSpace="calibratedRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="H3t-1b-51V" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="43B-AP-K98"/>
+                            <constraint firstItem="S6M-aj-8VZ" firstAttribute="top" secondItem="H3t-1b-51V" secondAttribute="bottom" constant="10" id="57p-gX-1QP"/>
+                            <constraint firstItem="H3t-1b-51V" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7YX-D0-QgC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="H3t-1b-51V" secondAttribute="trailing" constant="10" id="9Zx-h8-QgD"/>
+                            <constraint firstItem="S6M-aj-8VZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="Fu8-An-l07"/>
+                            <constraint firstItem="S6M-aj-8VZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="G7E-fZ-nVV"/>
+                            <constraint firstItem="S6M-aj-8VZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GFy-DU-MZO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="S6M-aj-8VZ" secondAttribute="trailing" constant="10" id="ZVn-QE-h1c"/>
+                            <constraint firstItem="H3t-1b-51V" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="x65-3W-avi"/>
+                        </constraints>
+                        <connections>
+                            <action selector="userTappedBackgroundWith_sender:" destination="BYZ-38-t0r" eventType="valueChanged" id="vKb-j9-hbC"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="firstTextField" destination="H3t-1b-51V" id="R3O-9V-QQq"/>
+                        <outlet property="secondTextField" destination="S6M-aj-8VZ" id="7Xy-Ku-tjI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
         </scene>
     </scenes>
 </document>
